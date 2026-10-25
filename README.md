@@ -1,16 +1,27 @@
-# CC105_Scenario9_Ecommerce
+# 🛒 E-Commerce Order Fulfillment & Audit Engine
+> **CC105: Data Structures & Algorithms — Terminal Assessment 2 (Scenario 9)**  
+> **National Teachers College — Department of Computer Studies**
 
-E-Commerce Order Fulfillment & Audit Engine (CC105 - Terminal Assessment 2)
-Scenario 9 Overview
-An enterprise-grade C++ console application designed to manage online retail orders using dynamic memory management, raw pointers, and linear dynamic data structures without relying on C++ STL container wrappers.
+An enterprise-grade C++ console application designed to manage online retail orders using dynamic memory management, raw C++ pointers, and linear dynamic data structures without relying on C++ STL container wrappers.
 
-Core Data Structures Implemented
-Master Orders Ledger: Custom Doubly Linked List for bidirectional order tracking ($O(n)$ search, $O(1)$ deletion given node pointer).
-Dispatch Queue: Priority Queue placing "Express" orders ahead of "Standard" and "Eco" orders.
-Cart & Coupon Engine: Dynamic LIFO Stack for managing cart modifications and discount rollbacks.
-Benchmarking Suite: Empirical profiling engine tracking wall-clock execution time (<chrono>), comparison counts, and swap counts for Bubble, Selection, and Insertion Sort across dataset scales up to N=50,000.
+---
 
-## Compilation & Run Instructions
-1. Open `CC105_Scenario9_Ecommerce.cbp` in Code::Blocks (or any modern C++ compiler).
-2. Press `F9` (Build and Run).
-3. Navigate the CLI menu using numeric selections (0–7).
+## 🏛️ Core Data Structures Implemented
+
+* **Master Orders Ledger (`Doubly Linked List`):** Bidirectional tracking of customer order records supporting $O(1)$ head insertion and $O(1)$ node deletion given a pointer reference.
+* **Order Dispatch Queue (`Priority Queue`):** Dynamically prioritizes high-urgency `Express` shipments ahead of `Standard` and `Eco` orders to meet service level agreements (SLAs).
+* **Checkout Cart & Coupon Engine (`Dynamic Stack`):** Enforces strict Last-In, First-Out (LIFO) order tracking, allowing real-time rollback/undo capabilities for recently added items or discounts.
+* **Empirical Benchmarking Suite:** Automated performance profiling engine measuring wall-clock execution time (`<chrono>`), comparison counts, and swap metrics across Bubble Sort, Selection Sort, and Insertion Sort for dataset scales up to $N=50,000$.
+
+---
+
+## 🛠️ System Requirements & Build Instructions
+
+### Prerequisites
+* **Compiler:** Modern C++ Compiler (`g++`, `clang++`, or MSVC supporting C++11 standard or higher).
+* **IDE:** Code::Blocks, VS Code, Visual Studio, or CLion.
+
+### Compilation Steps
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/notivee/CC105_Scenario9_Ecommerce.git](https://github.com/notivee/CC105_Scenario9_Ecommerce.git)
